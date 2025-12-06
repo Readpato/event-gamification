@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fff;
+  --foreground: #111827;
+  --primary: #c0392b;
+  --secondary: #12142d;
+  --accent: #d05a43;
+  --button: #edcfb7;
+  --text: #111;
+  --onlight: #fff;
+  --ondark: #111;
+}
+
+/* Astro Docs Dark Theme Overrides*/
+:root[data-theme='dark'] {
+  --background:  #17181c;
+  --text: #c1c3c8;
+}
+
+
+/* Force lists to show bullets/numbers in Starlight */
+.sl-markdown-content ul {
+  list-style-type: disc !important;
+  padding-left: 1.5rem !important;
+}
+
+.sl-markdown-content ol {
+  list-style-type: decimal !important;
+  padding-left: 1.5rem !important;
+}
+
+.sl-markdown-content ul ul {
+  list-style-type: circle !important;
+}
+
+.sl-markdown-content ol ol {
+  list-style-type: lower-alpha !important;
+}
+
+
+body {
+  color: var(--text);
+  background: var(--background);
+  font-family: "Inter", Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .bg-foreground { background-color: var(--foreground); }
+  .text-foreground { color: var(--foreground); }
+  .text-onlight { color: var(--onlight); }
+  .text-ondark { color: var(--ondark); }
+  .text-primary { color: var(--primary); }
+  .text-secondary { color: var(--secondary); }
+  .text-accent { color: var(--accent); }
+  .text-button { color: var(--button); }
+  .text-text { color: var(--text); }
+  .text-onlight { color: var(--onlight); }
+  .text-ondark { color: var(--ondark); }
+}
