@@ -7,8 +7,6 @@ import { Button } from './ui/button'
 import { Input } from './ui/input.generic'
 import { getEventCodeFromSubdomain, isLocalhost } from '@/lib/utils/getEventCodeFromSubdomain'
 
-
-
 export function SignUpForm() {
   const router = useRouter()
   const [formData, setFormData] = useState<SignupPayload>({
